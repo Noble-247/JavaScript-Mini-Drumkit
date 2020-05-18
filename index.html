@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Drum Kit</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+    <style>
+        /* Hide the toggle checkbox */
+        
+        #expand-toggle {
+            display: none;
+        }
+        /* Hide expandable content by default */
+        
+        .expandable {
+            visibility: collapse;
+            background: #ddd;
+        }
+        /* Style the button */
+        
+        #expand-button {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 5px 11px;
+            background-color: rgb(247, 247, 9);
+            border: 1px solid;
+            border-radius: 3px;
+        }
+        
+        #expand-button:hover {
+            cursor: pointer;
+        }
+        /* Show hidden content when the checkbox is checked */
+        
+        #expand-toggle:checked~* .expandable {
+            visibility: visible;
+        }
+        /* Style the button when the checkbox is checked */
+        
+        #expand-toggle:checked~#expand-button {
+            background-color: rgb(245, 11, 11);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Emmanuel's Drum Kit</h1>
+    <div class="set">
+        <button class="w drum">w</button>
+        <button class="a drum">a</button>
+        <button class="s drum">s</button>
+        <button class="d drum">d</button>
+        <button class="j drum">j</button>
+        <button class="k drum">k</button>
+        <button class="l drum">l</button>
+    </div>
+
+    <label for="expand-toggle" id="expand-button">Menu</label>
+    <input type="checkbox" id="expand-toggle">
+    <ul>
+        <li class="expandable">Home</li>
+        <li class="expandable">About</li>
+        <li class="expandable">Contact</li>
+        <li class="expandable">FAQ</li>
+    </ul>
+
+
+    <footer>
+        Made By Emmatech Digital World
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/object.js"></script>
+    <!-- <script src="js/js_consoleCalculator.js"></script> -->
+</body>
+
+</html>
